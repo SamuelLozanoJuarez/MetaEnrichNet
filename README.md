@@ -14,14 +14,14 @@ We seek to bring bioinformatics analysis closer to all users in a simple, fast a
     3.  [Run Analysis](#run-analysis)
     4.  [Visualize Results](#visualize-results)
     5.  [Export Results](#export-results)
-2.  [Running MetaEnrichNet Locally](#running-locally)
+2.  [Running MetaEnrichNet Locally](#running-metaenrichnet-locally)
     1.  [Requirements](#requirements)
     2.  [Installation](#installation)
     3.  [Running the App](#running-the-app)
 
 ![](MetaEnrichNet_interfaz.png)
 
-## How the App Works {#how-the-app-works}
+## How the App Works
 
 The main interface of the programme has a left sidebar divided into two tabs: Analysis, which contains the tool's parameters, and Downloads, which allows downloading files.
 
@@ -32,7 +32,7 @@ In addition, it has four main windows:
 -   IDs involved per File: shows the number of proteins that are part of a network out of the total number of genes/proteins initially contained in each list.
 -   Network Plot: shows a graph of interactions between the proteins in the different lists entered.
 
-#### 1. Load Gene Data {#load-gene-data}
+#### 1. Load Gene Data
 
 The loading of the lists of genes/proteins to be integrated can be carried out in two ways:
 
@@ -42,18 +42,18 @@ The loading of the lists of genes/proteins to be integrated can be carried out i
 
 In order to observe how the tool works, an example dataset can be used. This set consists of four `.txt` files (*GSE10072.LCvsNormal, GSE19188.LCvsNormal, GSE63459.LCvsNormal, GSE75037.LCvsNormal*) containing Gene Symbol corresponding to genes overexpressed in lung cancer samples obtained in four different studies.
 
-#### 2. Set Parameters {#set-parameters}
+#### 2. Set Parameters
 
  - **Organism**: organism to which the identifiers entered in the gene/protein lists belong. The tool is able to handle data from human (*Homo sapiens*), mouse (*Mus musculus*) and *Escherichia coli*.
  - **Threshold value**: evidence score that STRING will use as a quality filter to determine which protein-protein interactions are considered in model building. Higher Threshold values imply more evidence and will be more restrictive.
  - **Minimum number of nets for including a protein**: minimum number of networks in which a protein must be involved in order to be considered in the total protein graph.
  - **Minimum Mean Interactions for including a protein**: minimum number of average interactions a protein must have to be considered in the total protein graph.
 
-#### 3. Run Analysis {#run-analysis}
+#### 3. Run Analysis
 
 After setting the parameters of the tool, the analysis has to be run by clicking on the *‘Run Analysis’* button. **The analysis may take a few moments**, especially if it is the first time the tool is run, as it has to build the STRING model. After completion of the analysis, the *‘Interactions per ID’* window will be displayed automatically.
 
-#### 4. Visualize Results {#visualize-results}
+#### 4. Visualize Results
 
 MetaEnrichNet returns 3 results, available in each of the windows:
 
@@ -63,7 +63,7 @@ MetaEnrichNet returns 3 results, available in each of the windows:
  
 Two additional buttons are included within the *Network Plot* window. The first button, *‘Show Network’*, allows the network to be displayed when pressed. The second, *‘Update Network’*, allows you to update the proteins that are considered in the network after modifying the parameters, thus avoiding having to perform the analysis again. After updating the network, it is necessary to activate the *‘Show Network’* button again for the network to be displayed.
 
-#### 5. Export Results {#export-results}
+#### 5. Export Results
 
 From the *Downloads* tab you can download the results in different formats:
 
@@ -72,9 +72,9 @@ From the *Downloads* tab you can download the results in different formats:
  - `.txt`: white space-separated text, available for *Interactions per ID* and *IDs involved per File* results.
  - `.html`: available for *Network Plot* results. The downloaded file can be opened in a browser and interacted with the network, as well as opened directly in STRING using the hyperlink available inside it.
 
-## Running the App Locally {#running-locally}
+## Running MetaEnrichNet Locally
 
-### Requirements {#requirements}
+### Requirements
 
 The tool was developed with `R` version `4.4.2`, so a compatible version is required. It is also advisable to have the RStudio IDE installed, to facilitate the execution of the tool,  as well as the following libraries:
 
@@ -88,12 +88,11 @@ The tool was developed with `R` version `4.4.2`, so a compatible version is requ
  - `shinyWidgets` v 0.8.7
  - `shinyBS` v 0.61.1
 
-### Installation {#installation}
+### Installation
 
 No installation beyond those described in the Requirements section is necessary. It is enough to download the `MetaEnrichNet_app.R` script and its attached files.
 
-### Running the App {#running-the-app}
-
+### Running the App
 > [!TIP] If you are using **RStudio**, you can click the `Run App` option to run the app in its built-in browser.
 
 For running MetaEnrichNet, just go to the folder containing the script and run the following command in your console:
