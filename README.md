@@ -32,7 +32,7 @@ In addition, it has four main windows:
 -   IDs involved per File: shows the number of proteins that are part of a network out of the total number of genes/proteins initially contained in each list.
 -   Network Plot: shows a graph of interactions between the proteins in the different lists entered.
 
-#### 1. Load Gene Data
+#### Load Gene Data
 
 The loading of the lists of genes/proteins to be integrated can be carried out in two ways:
 
@@ -42,18 +42,18 @@ The loading of the lists of genes/proteins to be integrated can be carried out i
 
 In order to observe how the tool works, an example dataset can be used. This set consists of four `.txt` files (*GSE10072.LCvsNormal, GSE19188.LCvsNormal, GSE63459.LCvsNormal, GSE75037.LCvsNormal*) containing Gene Symbol corresponding to genes overexpressed in lung cancer samples obtained in four different studies.
 
-#### 2. Set Parameters
+#### Set Parameters
 
  - **Organism**: organism to which the identifiers entered in the gene/protein lists belong. The tool is able to handle data from human (*Homo sapiens*), mouse (*Mus musculus*) and *Escherichia coli*.
  - **Threshold value**: evidence score that STRING will use as a quality filter to determine which protein-protein interactions are considered in model building. Higher Threshold values imply more evidence and will be more restrictive.
  - **Minimum number of nets for including a protein**: minimum number of networks in which a protein must be involved in order to be considered in the total protein graph.
  - **Minimum Mean Interactions for including a protein**: minimum number of average interactions a protein must have to be considered in the total protein graph.
 
-#### 3. Run Analysis
+#### Run Analysis
 
 After setting the parameters of the tool, the analysis has to be run by clicking on the *‘Run Analysis’* button. **The analysis may take a few moments**, especially if it is the first time the tool is run, as it has to build the STRING model. After completion of the analysis, the *‘Interactions per ID’* window will be displayed automatically.
 
-#### 4. Visualize Results
+#### Visualize Results
 
 MetaEnrichNet returns 3 results, available in each of the windows:
 
@@ -63,7 +63,7 @@ MetaEnrichNet returns 3 results, available in each of the windows:
  
 Two additional buttons are included within the *Network Plot* window. The first button, *‘Show Network’*, allows the network to be displayed when pressed. The second, *‘Update Network’*, allows you to update the proteins that are considered in the network after modifying the parameters, thus avoiding having to perform the analysis again. After updating the network, it is necessary to activate the *‘Show Network’* button again for the network to be displayed.
 
-#### 5. Export Results
+#### Export Results
 
 From the *Downloads* tab you can download the results in different formats:
 
