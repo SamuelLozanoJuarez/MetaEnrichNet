@@ -1,0 +1,61 @@
+<html>
+  <head>
+
+      <!-- Embed the STRING's javascript -->
+
+      <script type="text/javascript" src="https://string-db.org/javascript/combined_embedded_network_v2.0.4.js"></script>
+
+      <style>
+
+           /* some styling */
+
+           body {
+               font-family: Arial;
+               color: #ffffff;
+               background: #ffffff;
+           }
+
+           input {
+               border: 4px solid #122e4d; 
+               width: 40%;
+               height: 50px;
+               border-radius: 10px;  
+               font-size: 20px;
+           }
+
+           button {
+               font-size:10px;
+               border-radius: 10px;  
+               border: 0.1px solid #122e4d; 
+           }
+
+      </style>
+      <script>
+
+          function send_request_to_string() {
+
+              var proteins = ["ASPM", "AURKA", "BIRC5", "BUB1B", "CCNB1", "CCNB2", "CDC20", "CDK1", "CDKN3", "CENPF", "CENPU", "CEP55", "DLGAP5", "ECT2", "GAPDH", "GINS1", "MAD2L1", "MCM4", "MELK", "MMP9", "NEK2", "PBK", "PRC1", "RFC4", "RRM2", "TOP2A", "TPX2", "TRIP13", "TTK", "TYMS", "UBE2C", "ZWINT", "NUSAP1", "ANLN", "AURKB", "BUB1", "CCNA2", "CCNE1", "CDC45", "CDCA3", "CDCA5", "CDCA7", "CDCA8", "EXO1", "FOXM1", "GINS2", "HJURP", "HMMR", "KIF11", "KIF20A", "KIF2C", "KIF4A", "MCM10", "NCAPG", "OIP5", "POLQ", "PTTG1", "RAD51AP1", "STIL", "TK1", "UBE2T", "UHRF1", "CCNF"];
+
+              /* the actual API query */
+
+              getSTRING('https://string-db.org', {
+                          'species':'9606',
+                          'identifiers':proteins,
+                          'network_flavor':'confidence', 
+                          'caller_identity': 'www.awesome_app.org'
+              })
+
+          }
+
+      </script>
+  </head>
+
+  <!-- HTML CODE -->
+
+  <body onload='javascript:send_request_to_string()'>
+      <center>
+             <button onclick='javascript:send_request_to_string();' type="button">Show Network</button>
+             <div id="stringEmbedded"></div>
+      </center>
+  </body>
+</html>
