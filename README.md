@@ -92,6 +92,8 @@ The tool was developed with `R` version `4.4.2`, so a compatible version is requ
 
 No installation beyond those described in the Requirements section is necessary. It is enough to download the `MetaEnrichNet_app.R` script and its attached files.
 
+You can access the code and other materials in the [https://github.com/SamuelLozanoJuarez/MetaEnrichNet](https://github.com/SamuelLozanoJuarez/MetaEnrichNet) repository.
+
 ### Running the App
 > [!TIP] If you are using **RStudio**, you can click the `Run App` option to run the app in its built-in browser.
 
